@@ -332,25 +332,6 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Why Choose Us Section */
-        #why-us {
-             background: var(--white-color);
-        }
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        .why-us-item i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        .why-us-item h3 { font-size: 1.2rem; font-weight: 600; }
-        .why-us-item p { font-size: 0.9rem; }
-
-
         /* Gallery Section */
          #gallery {
             background: var(--light-color);
@@ -514,7 +495,7 @@
             line-height: 50px;
             font-size: 20px;
             border-radius: 50%;
-            z-index: 999;
+            z-index: 1600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
@@ -522,6 +503,30 @@
             background: var(--secondary-color);
             transform: translateY(-5px);
             color: var(--white-color);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: var(--white-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-decoration: none;
+            z-index: 1600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
         
         /* Cookie Consent Banner */
@@ -647,10 +652,10 @@
 
         <!-- Hero Section --><section id="hero" class="hero">
             <div class="hero-slideshow">
-                <img src="Clinic Interior.jpg" class="slide active" alt="Modern dental clinic reception">
-                <img src="Clinic%20Exterior.jpg" class="slide" alt="Dentist with a patient">
-                <img src="chair.jpg" class="slide" alt="Dental equipment">
-                <img src="clinik.jpg" class="slide" alt="Patient with a bright smile">
+                <img src="Clinic Interior.jpg" class="slide active" alt="Modern dental clinic reception" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/cccccc/ffffff?text=Image+Not+Found';">
+                <img src="Clinic Exterior.jpg" class="slide" alt="Dentist with a patient" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/cccccc/ffffff?text=Image+Not+Found';">
+                <img src="chair.jpg" class="slide" alt="Dental equipment" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/cccccc/ffffff?text=Image+Not+Found';">
+                <img src="clinik.jpg" class="slide" alt="Patient with a bright smile" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/cccccc/ffffff?text=Image+Not+Found';">
             </div>
             <div class="hero-overlay"></div>
             <h1 data-aos="fade-down" data-aos-duration="1000">Priti Dental & Implant Centre</h1>
@@ -693,19 +698,6 @@
             </div>
         </section>
         
-        <!-- Why Choose Us Section --><section id="why-us">
-            <div class="container">
-                 <h2 data-aos="fade-up">Why Choose Us?</h2>
-                 <div class="section-title-underline" data-aos="fade-up" data-aos-delay="100"></div>
-                 <div class="why-us-grid">
-                     <div class="why-us-item" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-star"></i><h3>5-Star Rated Clinic</h3><p>Trusted by patients with a perfect 5.0 Google rating.</p></div>
-                     <div class="why-us-item" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-user-md"></i><h3>Expert & Caring Doctor</h3><p>Receive care from the experienced hands of Dr. Priti Mishra.</p></div>
-                     <div class="why-us-item" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-clinic-medical"></i><h3>Modern & Hygienic</h3><p>Equipped with the latest technology in a clean environment.</p></div>
-                     <div class="why-us-item" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-rupee-sign"></i><h3>0% EMI Available</h3><p>Flexible payment options via Bajaj Finserv.</p></div>
-                 </div>
-            </div>
-        </section>
-
         <section id="testimonials">
             <div class="container">
                 <h2 data-aos="fade-up">What Our Patients Say</h2>
@@ -784,6 +776,11 @@
     <!-- Back to Top Button -->
     <a href="#" id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919799841764?text=Hello%20Priti%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-fab" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Footer --><footer class="footer">
